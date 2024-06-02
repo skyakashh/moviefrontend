@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { createMovie } from '../services/movieService';
 
 const AddMovie = () => {
-  const [movie, setMovie] = useState({ movie: '', watched: false });
+  const [movie, setMovie] = useState({ movie: '',_id: '',watched: false });
   const navigate = useNavigate();
 
   const handleChange = (e) => {

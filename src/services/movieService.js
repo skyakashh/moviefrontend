@@ -27,7 +27,7 @@ export const createMovie = async (movie,watched) => {
 
 export const markAsWatched = async (id) => {
   try {
-    const response = await axios.put(`${API_URL}/watched/${id}`);
+    const response = await axios.post(`${API_URL}/watched/${id}`);
     return response.data;
   } catch (error) {
     console.error("Error updating movie", error);
@@ -37,7 +37,7 @@ export const markAsWatched = async (id) => {
 
 export const deleteMovie = async (id) => {
   try {
-    const response = await axios.delete(`${API_URL}/delete/${id}`);
+    const response = await axios.post(`${API_URL}/delete/${id}`);
     return response.data;
   } catch (error) {
     console.error("Error deleting movie", error);
@@ -47,7 +47,7 @@ export const deleteMovie = async (id) => {
 
 export const deleteAllMovies = async () => {
   try {
-    const response = await axios.delete(`${API_URL}/deleteall`);
+    const response = await axios.post(`${API_URL}/deleteall`);
     return response.data;
   } catch (error) {
     console.error("Error deleting all movies", error);
